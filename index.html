@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinoBaba - Your Financial Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://unpkg.com/lucide-static/font/lucide.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <img src="https://i.ibb.co/WG1SRm9/Whats-App-Image-2024-11-23-at-16-26-03-5f101ecd.jpg" alt="FinoBaba - Your Financial Guide">
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#services">Services</a>
+                <a href="#professionals">Find CAs</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="btn-login" onclick="openAuthModal('login')">Log in</button>
+                <button class="btn-register" onclick="openAuthModal('register')">Register</button>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="lucide-menu"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Trusted Financial Guide</h1>
+            <p>Connect with expert Chartered Accountants for tax consulting, auditing, compliance, and more. Get professional financial guidance tailored to your business.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for services or CA professionals...">
+                <button class="search-btn">
+                    <i class="lucide-search"></i>
+                </button>
+            </div>
+            <div class="hero-buttons">
+                <a href="#services" class="btn-primary">Explore Services</a>
+                <a href="#professionals" class="btn-secondary">Find a CA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive CA Services</p>
+        </div>
+        <div class="services-grid" id="servicesGrid">
+            <!-- Services will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Professionals Section -->
+    <section id="professionals" class="professionals">
+        <div class="section-header">
+            <h2>Expert Professionals</h2>
+            <p>Meet Our Top Chartered Accountants</p>
+        </div>
+        <div class="professionals-grid" id="professionalsGrid">
+            <!-- Professionals will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to get started?</h2>
+            <p>Connect with a CA today</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Find a CA</a>
+                <a href="#" class="btn-secondary">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="https://i.ibb.co/WG1SRm9/Whats-App-Image-2024-11-23-at-16-26-03-5f101ecd.jpg" alt="FinoBaba - Your Financial Guide" class="footer-logo">
+                <p>Your trusted financial guide for all accounting, tax, and business advisory needs.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#professionals">Find CAs</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Tax Consulting</a></li>
+                    <li><a href="#">Auditing</a></li>
+                    <li><a href="#">Business Registration</a></li>
+                    <li><a href="#">Financial Planning</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="lucide-mail"></i> contact@finobaba.com</li>
+                    <li><i class="lucide-phone"></i> +1 (234) 567-890</li>
+                    <li><i class="lucide-map-pin"></i> 123 Financial District, Mumbai</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FinoBaba. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="lucide-facebook"></i></a>
+                <a href="#"><i class="lucide-twitter"></i></a>
+                <a href="#"><i class="lucide-instagram"></i></a>
+                <a href="#"><i class="lucide-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAuthModal()">
+                <i class="lucide-x"></i>
+            </button>
+            <h2 id="modalTitle">Login</h2>
+            <form id="authForm" onsubmit="handleAuth(event)">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/professionals.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
